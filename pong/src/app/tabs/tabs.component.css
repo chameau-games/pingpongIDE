@@ -1,0 +1,16 @@
+:host {
+  width: 100%;
+}
+
+::ng-deep.p-tabview-panels {
+  padding: 0 !important;
+}
+
+::ng-deep.p-tabview-panels, p-tabView, ::ng-deep.p-tabview,  ::ng-deep.p-tabview-panel{
+  height: 100%;
+}
+
+::ng-deep.p-tabview {
+  display: flex;
+  flex-direction: column;
+}

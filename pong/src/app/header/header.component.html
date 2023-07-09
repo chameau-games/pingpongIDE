@@ -1,0 +1,6 @@
+<p-menubar [model]="items">
+  <ng-template pTemplate="end">
+    <p-button [style]="{'margin-right': '5px'}" *ngIf="csharp" (click)="format()" label="Format" icon="pi pi-align-left" iconPos="right"></p-button>
+    <p-button *ngIf="projectOpened" (click)="start()" label="Start" icon="pi pi-play" iconPos="right"></p-button>
+  </ng-template>
+</p-menubar>

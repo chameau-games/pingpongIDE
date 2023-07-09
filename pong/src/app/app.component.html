@@ -1,0 +1,19 @@
+<app-header [csharp]="csharp" [projectOpened]="projectOpened"></app-header>
+<main>
+  <p-dialog header=".NET n'est pas installé sur votre ordinateur !" [(visible)]="dialogVisible" position="bottomright"
+            [draggable]="false" [resizable]="false" >
+    <p>
+      Suivez ce lien pour installer la dernière version de .NET (7).
+    </p>
+    <a>https://dotnet.microsoft.com/download/dotnet</a>
+  </p-dialog>
+  <p-splitter [panelSizes]="[15, 85]" [gutterSize]="2">
+    <ng-template pTemplate>
+      <app-explorer></app-explorer>
+    </ng-template>
+    <ng-template pTemplate>
+       <app-tabs (csharp)="csharp = $event" #tabs></app-tabs>
+    </ng-template>
+  </p-splitter>
+</main>
+<p-toast position="bottom-right" key="br"></p-toast>

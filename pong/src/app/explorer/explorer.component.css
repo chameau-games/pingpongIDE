@@ -1,0 +1,26 @@
+:host {
+  height: 100%;
+  width: 100%;
+}
+
+::ng-deep.p-tree	{
+  border: none;
+  padding: 0;
+}
+
+::ng-deep.p-treenode-content {
+  padding-right: 20px !important;
+}
+
+::ng-deep.p-treenode-label {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+::ng-deep.p-dialog-header	{
+  padding-bottom: 0 !important;
+}
+
+::ng-deep.p-dialog-footer button:last-child {
+  margin: 0;
+}

@@ -1,0 +1,25 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 10px;
+}
+
+main {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+p-splitter{
+  width: 100%;
+}
+
+::ng-deep.p-splitter {
+  height: 100%;
+}
+
+::ng-deep.p-dialog-bottom-right{
+  padding: 10px;
+}

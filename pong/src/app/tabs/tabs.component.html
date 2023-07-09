@@ -1,0 +1,5 @@
+<p-tabView (onChange)="changeTab()" *ngIf="files.length > 0" [(activeIndex)]="selected" (onClose)="close(files[$event.index])">
+  <p-tabPanel *ngFor="let file of files" [header]="getBasename(file)" [closable]="true">
+    <app-editor #editors [filePath]="file"></app-editor>
+  </p-tabPanel>
+</p-tabView>
