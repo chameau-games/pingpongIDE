@@ -10,7 +10,8 @@ if (require('electron-squirrel-startup')) {
   app.quit();
 }
 
-spawn('java', ['-jar', '../quarkus-app/quarkus-run.jar']);
+if (app.isPackaged)
+  spawn('java', ['-jar', '../quarkus-app/quarkus-run.jar']);
 
 const createWindow = () => {
   // Create the browser window.
@@ -59,7 +60,8 @@ app.on('window-all-closed', () => {
     app.quit();
   }
   // shutdown quarkus
-  get('http://localhost:4299/quit');
+  if (app.isPackaged)
+    get('http://localhost:4299/quit');
 });
 
 app.on('activate', () => {
