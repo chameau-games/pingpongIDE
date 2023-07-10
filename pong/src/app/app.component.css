@@ -10,6 +10,7 @@ main {
   display: flex;
   flex-direction: row;
   height: 100%;
+  overflow: hidden;
 }
 
 p-splitter{
@@ -18,6 +19,10 @@ p-splitter{
 
 ::ng-deep.p-splitter {
   height: 100%;
+}
+
+::ng-deep.p-splitter-panel {
+  min-width: 0;
 }
 
 ::ng-deep.p-dialog-bottom-right{

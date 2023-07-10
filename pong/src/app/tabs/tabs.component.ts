@@ -83,10 +83,10 @@ export class TabsComponent {
   }
 
   changeTab() {
-    if (this.files.length === 0)
+    const filePath = this.files[this.selected];
+    if (this.files.length === 0 || filePath === undefined)
       this.csharp.emit(false);
     else {
-      const filePath = this.files[this.selected];
       this.csharp.emit(path.extname(filePath) === '.cs');
     }
   }

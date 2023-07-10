@@ -9,7 +9,7 @@ import {ThemesService} from "../themes.service";
 import {BackendService} from "../backend.service";
 import path from "path";
 
-const MODES : any = {'.cs': 'csharp', '.csproj': 'xml'}
+const MODES : any = {'.cs': 'csharp', '.csproj': 'xml', '.xml': 'xml', '.json': 'json'}
 
 @Component({
   selector: 'app-editor',

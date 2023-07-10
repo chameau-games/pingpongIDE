@@ -21,6 +21,7 @@ import {MonacoEditorModule} from "ngx-monaco-editor-v2";
 import {FormsModule} from "@angular/forms";
 import {ConfirmDialogModule} from "primeng/confirmdialog";
 import {InputTextModule} from "primeng/inputtext";
+import {ScrollPanelModule} from "primeng/scrollpanel";
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import {InputTextModule} from "primeng/inputtext";
     FormsModule,
     ConfirmDialogModule,
     InputTextModule,
+    ScrollPanelModule
   ],
   providers: [MessageService, ConfirmationService],
   exports: [],

@@ -1,5 +1,9 @@
-<p-tree [value]="files" *ngIf="files.length > 0" selectionMode="single" (onNodeExpand)="nodeExpand($event)"
-        (dblclick)="nodeDoubleClick()" (onNodeSelect)="nodeSelect($event)" (onNodeContextMenuSelect)="nodeSelect($event)" [loading]="loading" [contextMenu]="contextMenu"></p-tree>
+<p-scrollPanel [style]="{'width': '100%'}">
+  <p-tree [value]="files" *ngIf="files.length > 0" selectionMode="single" (onNodeExpand)="nodeExpand($event)"
+          (dblclick)="nodeDoubleClick()" (onNodeSelect)="nodeSelect($event)" (onNodeContextMenuSelect)="nodeSelect($event)" [loading]="loading" [contextMenu]="contextMenu"></p-tree>
+</p-scrollPanel>
+
+
 <p-contextMenu #contextMenu [model]="menu"></p-contextMenu>
 
 <p-confirmDialog #inputTextDialog key="inputText">
